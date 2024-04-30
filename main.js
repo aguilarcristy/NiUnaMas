@@ -163,7 +163,7 @@ function init() {
     scene.add(light);
 
     camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-    camera.position.set(0, 5, 5);
+    camera.position.set(0, 2, 12);
 
     renderer = new THREE.WebGLRenderer({ antialias: true, canvas: document.querySelector('#bg') });
     renderer.setSize(window.innerWidth, window.innerHeight);
@@ -192,7 +192,7 @@ function onWindowResize() {
 
 function loadModel() {
     const loader = new GLTFLoader();
-    loader.load('BlenderFile2.gltf', function (gltf) {
+    loader.load('Blender_File_Animated.gltf', function (gltf) {
         const model = gltf.scene;
         scene.add(model);
 
@@ -200,7 +200,7 @@ function loadModel() {
         const clips = gltf.animations;
         const animationActions = [];
 
-        const animationNamesToPlay = ['Star1Action', 'Star2Action', 'Star3Action', 'Star4Action','LeftVenusAction', 'MiddleVenusAction', 'RightVenusAction'];
+        const animationNamesToPlay = ['Curve.011Action', 'Star1Action', 'Star2Action', 'Star3Action', 'Star4Action','LeftVenusAction', 'MiddleVenusAction', 'MiddleVenusAction.004', 'RightVenusAction'];
 
         clips.forEach(animation => {
             if (animationNamesToPlay.includes(animation.name)) {
@@ -227,7 +227,6 @@ function onMouseMove(event) {
 
     camera.lookAt(pos);
 }
-
 
 window.addEventListener('resize', onWindowResize, false);
 init();
