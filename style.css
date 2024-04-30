@@ -1,12 +1,3 @@
-/* ORIGINAL CODE */
-/* body {
-  margin:0;
-  padding:0;
-  height: 100%;
-  background-color: #f7d4ed;
-
-   } */
-
 body {
     margin: 0;
     padding: 0;
@@ -16,18 +7,22 @@ body {
     grid-template-columns: 1fr 1fr; /* Divide the body into two equal columns */
 }
   
-
 canvas {
 position: fixed;
-/* top: 0;
-left: 0; */
+top: 0;
+left: 0;
 width: 100vw;
 height: 100vh;
 z-index: -1;
 }
 
 #bg {
-background-color: #e6d6ff;
+background-color: #f7d4ed;
+display: flex;
+/* padding: 20px 20px; */
+align-content:right;
+float: right;
+position: absolute; 
 
 }
 
@@ -78,7 +73,8 @@ h1 {
   font-variation-settings: "wght" 200;
   outline: none;
   text-align: left;
-  margin: 40px 40px; 
+  margin: 20px 20px; 
+  position:relative;
 }
 
 h1:hover {
@@ -120,6 +116,14 @@ p {
 }
 
 .left-container {
+  padding: 50px 20px 20px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: left;
+}
+
+.left-container2 {
   padding: 50px;
   display: flex;
   flex-direction: column;
@@ -132,6 +136,7 @@ p {
   justify-content: right;
   align-items: right;
   max-width: 30vw;
+  /* padding: 20px 20px; */
 }
 
 .button-container {
@@ -141,7 +146,7 @@ align-items: left;
 }
 
 .btn {
-  background: #ff5ec4;
+  background: #833d9f;
   border-radius: 25px;
   font-family: 'Sedan';
   color: #ffffff;
@@ -152,9 +157,9 @@ align-items: left;
 }
 
 .btn:hover {
-  background: #ffb7ea;
+  background: #d15eff;
   text-decoration: none;
-  color:#aa0e7e;
+  color:#ffffff;
 }
 
 .animated-text {
@@ -200,4 +205,31 @@ align-items: left;
   font-family: "Sedan", serif;
   font-weight: 400;
   font-style: italic;
+}
+
+.floating-image {
+  animation: floatUpDown 10s infinite; /* Adjust the duration as needed */
+  max-width: 15%;
+  height: auto;
+  margin: 20px 20px;
+  /* float:right;
+  align-items: right;
+  align-content: right;
+  position:absolute; */
+}
+
+
+/* Style for the footer container */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #e6d6ff;
+  padding: 20px; /* Adjust padding as needed */
+}
+
+/* Style for the images */
+.footer img {
+  width: 100px; /* Adjust image width as needed */
+  height: auto; /* Maintain aspect ratio */
 }
